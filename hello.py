@@ -295,6 +295,7 @@ def check(l):
     return           
 check(ls) 
 """
+"""
 def udf():
     print("")
     flag = 1
@@ -325,11 +326,208 @@ def udf():
         else:
             while flag == 1:
                 print("Enter valid Input!!") 
-                d = input("Are you want to repeat this Function:(y / n):    ") 
+                d = input("Are you want to repeat this Function:(y / n):  ") 
                 if d == "y":
                     break
                 elif d == "n":
                     flag = 0  
                 else:
                     pass                                                          
-udf()                                                
+udf()             
+"""
+'''
+#Tuples Examples
+
+tp = (1,2,3,4,5,6.0)
+for i in tp:
+    print(i)
+
+num = (1)
+num2 = (1,)
+ex = 'Husen', 'Smeet', 'Bhargav', 'Hardik'
+print(type(num))
+print(type(num2))
+print(type(ex))
+
+# Tuple unpacking
+employee = ('Husen', 'Hardik', 'Smit')
+em1, em2, em3 = employee
+print(f'{em1}, {em2}, {em3}')
+
+# ḷist inside tuples
+tp = ('abc', ['def', 'ghi'])
+print(tp)
+tp[1].pop()
+print(tp)
+tp[1].append('abcd')
+print(tp)
+
+# min, max, sum,
+num = (5,6,4,2)
+print(min(num))
+print(max(num))
+print(sum(num))
+
+# Fucntion returning two values
+def fun(int1, int2):
+    add = int1 + int2
+    mul = int1 * int2
+    return add, mul
+sum, mul = fun(5,6)
+print(sum)
+print(mul)
+'''
+# Dictionary Intro
+# user = {'name' : 'Husen', 'lname' : 'Lokhandwala'}
+# print(user);
+# second method to create Dictionary
+# user = dict(name = 'Husen', lname = 'Lokhandwala')
+# print(f"Hello {user['name']} {user['lname']} how are you:)")
+
+
+# # Adding key and values in empty Dictionary
+# user = {}
+# user['name'] = 'Husen'
+# user['lname'] = 'Lokhandwala'
+# print(user)
+
+# user = {
+#     'name' : 'Husen',
+#     'lname' : 'Lokhandwala',
+#     'age' : 20,
+#     'stream' : 'BCA'
+# }
+
+# Check if key is exist in dictionary
+
+# if 'name' in user:
+#     print('Yes')
+
+# check if value exist in dictionary using values() method
+
+# if 'Husen' in user.values():
+#     print('Yes')
+# else:
+#     print('No')
+
+# Loop in Dictionary
+# for i in user.values():
+#     print(i)
+
+# print(user.items())
+
+# How to add data in dictionary
+# user['fav_color'] = 'red'
+# print(user)
+
+# Pop method
+# print(f'Returned value ', user.pop('stream'))
+# print(user)
+
+# popitem method
+# user.popitem()
+# print(user)
+
+
+# Update Method 
+# user = {
+#     'name' : 'Husen',
+#     'lname' : 'Lokhandwala',
+#     'age' : 20,
+#     'stream' : 'BCA'
+# }
+# more_info = {
+#     'name' : 'Husain',
+#     'fav_subject' : 'Python'
+# }
+# user.update(more_info)
+# print(user)
+
+
+# fromkeys method for dictionary
+# clear method
+# get method
+
+
+# exercise cube finder
+# cube = {}
+# n = int(input("Enter number :- "))
+# for i in range(1, n+1):
+#     cube[i] = i*i*i
+# print(cube)
+
+
+# exercise 2
+
+'''
+
+class myClass:
+    __a = 0
+
+    def count(self):
+        self.__a += 1
+o = myClass()
+print(o._myClass__a)
+o.count()
+print(o._myClass__a)
+o.count()
+print(o._myClass__a)
+o.count()
+print(o._myClass__a)
+
+'''
+'''
+
+class myClass:
+    def __init__(self):
+        self.a = 123
+        self._b = 123
+        self.__c = 123
+
+o = myClass()
+print(o.a) 
+print(o._b)
+print(o._myClass__c)     
+
+'''
+
+
+'''
+class myClass:
+    def __init__(self):
+        self.__version = 22
+
+    def getVersion(self):
+        print(self.__version)
+
+    def setVersion(self, version):
+        self.__version = version
+
+o = myClass()
+o.getVersion()
+o.setVersion(23)
+o.getVersion()
+print(o._myClass__version)        
+'''
+
+# def search(values, no):
+#     search_at = 0
+#     search_res = False
+
+#     while search_at < len(values) and search_res is False:
+#         if values[search_at] == no:
+#             search_res = True
+#         else:
+#             search_at += 1
+#     return search_res
+
+# l = [12, 98, 65, 12, 77, 45, 82]
+
+# print(search(l, 12))
+# print(search(l, 45))
+# print(search(l, 78))
+
+import pylab
+pylab.figure(1)
+pylab.plot([1,2,3,4,5],[1,7,3,5,12])
+pylab.show()
